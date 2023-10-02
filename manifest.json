@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Qwiklabs Token Manager",
+  "description": "Manage Qwiklabs Token",
+  "version": "0.1",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "token_manager_extension.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/tokenInjector.js"],
+      "matches": ["https://www.cloudskillsboost.google/focuses/*"]
+    }
+  ]
+}
